@@ -1,6 +1,6 @@
 
 //method One
-class Greeter {
+class Formatter {
     message: string;
 
     constructor(message: string) {
@@ -28,13 +28,10 @@ class Greeter {
     }
 }
 
-const greeter = new Greeter("Hello");
-const price = greeter.greet(42.99);
-console.log({ price });
-const longText = greeter.greet("Very long text");
-console.log({ longText });
-const date = greeter.greet(new Date());
-console.log({ date });
+const methodone = new Formatter("Hello");
+console.log(methodone.greet(42.99));
+console.log(methodone.greet("Very long text"));
+console.log(methodone.greet(new Date()));
 
 //--------------------------------------------------------//
 
@@ -57,7 +54,7 @@ class Formatter1 {
     }
 }
 
-const formatter = new Formatter1();
-console.log(formatter.format(new Date(), 0));
-console.log(formatter.format(42.99, 0));
-console.log(formatter.format("Very long text", 10));
+const mathodTwo = new Formatter1();
+console.log(mathodTwo.format(new Date(), 0));
+console.log(mathodTwo.format(42.99, 0));
+console.log(mathodTwo.format("Very long text", 10));
