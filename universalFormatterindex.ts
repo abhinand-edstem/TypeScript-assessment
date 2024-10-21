@@ -7,10 +7,10 @@ class Formatter {
         this.message = message;
     }
 
-    greet(price: number): string;
-    greet(longText: string): string;
-    greet(todayDate: Date): string;
-    greet(value: unknown) {
+    format(price: number): string;
+    format(longText: string): string;
+    format(todayDate: Date): string;
+    format(value: unknown) {
         if (typeof value === "number") {
             return "$" + value.toString();
         } else if (typeof value === "string") {
@@ -29,15 +29,15 @@ class Formatter {
 }
 
 const methodone = new Formatter("Hello");
-console.log(methodone.greet(42.99));
-console.log(methodone.greet("Very long text"));
-console.log(methodone.greet(new Date()));
+console.log(methodone.format(42.99));
+console.log(methodone.format("Very long text"));
+console.log(methodone.format(new Date()));
 
 //--------------------------------------------------------//
 
 //Method Two
 class Formatter1 {
-    format(input: Date | number | string, stringCount: number): string {
+    format1(input: Date | number | string, stringCount: number): string {
         if (input instanceof Date) {
             const year = input.getFullYear();
             const month = (input.getMonth() + 1);
@@ -55,6 +55,6 @@ class Formatter1 {
 }
 
 const mathodTwo = new Formatter1();
-console.log(mathodTwo.format(new Date(), 0));
-console.log(mathodTwo.format(42.99, 0));
-console.log(mathodTwo.format("Very long text", 10));
+console.log(mathodTwo.format1(new Date(), 0));
+console.log(mathodTwo.format1(42.99, 0));
+console.log(mathodTwo.format1("Very long text", 10));
