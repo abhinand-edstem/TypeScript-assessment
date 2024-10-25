@@ -12,6 +12,7 @@ type Example2 = UnwrapPromise<string[]>; // string[] (unchanged)
 
 
 //Nested Promise
+
 // Example: Basic Promise unwrapping
 const stringPromise = Promise.resolve("Hello");
 type UnwrappedType = UnwrapPromise<typeof stringPromise>; // string
